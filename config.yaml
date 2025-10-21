@@ -1,0 +1,77 @@
+baseURL: "https://example.org/"
+languageCode: VI
+build:
+  writeStats: true
+title: Blog về lập trình mạng
+staticDir:
+  - static
+  - images
+
+params:
+  copyright: >-
+    powered by [hugo](https://gohugo.io/)
+  theme:
+    mainTheme: dark
+    showAttribute: true
+    singlePage: false
+
+  # Cấu hình blog đơn giản
+  blog:
+    showAuthor: true
+    showDate: true
+    showTags: true
+    showSummary: true
+    postsPerPage: 10
+
+  profile:
+    name: "Hoang Thanh Sang"
+    tagline: 22/08/2004
+    location: "Thu Duc, HCM City, Vietnam"
+    photo: image.jpg
+  social:
+    title: Links
+    list:
+      - icon: fab fa-github
+        url: "#"
+        title: GitHub
+      - icon: ai ai-google-scholar
+        url: "#"
+        title: Google Scholar
+      - icon: fab fa-researchgate
+        url: "#"
+        title: ResearchGate
+  showInAccordion:
+    - item: aboutme
+      expand: true
+    - item: education
+    - item: skill
+    - item: hobby
+  aboutme:
+    title: About Me
+    icon: fas fa-user
+    description: ""
+  education:
+    title: Education
+    icon: fas fa-graduation-cap
+    list:
+      - degree: Sinh viên năm 4 ngành Công nghệ phần mềm
+        college: Trường Đại học Công nghệ TPHCM (HUTECH)
+        dates: 2022 - 2026
+  skill:
+    title: Skills
+    panelId: skill-panel
+    icon: fas fa-cogs
+    list:
+      - skill: "Java/JavaScript, Python"
+        skillrating: 90
+      - skill: HTML, CSS, Bootstrap
+        skillrating: 80
+      - skill: Node.js, Express.js, PHP
+        skillrating: 50
+  hobby:
+    title: Hobbies
+    icon: fas fa-gamepad
+    list:
+      - hobby: Traveling
+      - hobby: Gaming
+      - hobby: Sleeping

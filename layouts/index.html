@@ -1,0 +1,105 @@
+{{ define "main" }}
+<div class="prose prose-lg max-w-none">
+  <div class="text-center mb-12">
+    <h1 class="text-4xl font-bold text-white mb-4">Chào mừng đến với blog của tôi</h1>
+    <p class="text-xl text-gray-300 mb-8">{{ .Site.Params.aboutme.description }}</p>
+  </div>
+
+  <!-- About Me Section -->
+  <div class="bg-gray-800 rounded-lg p-8 mb-8">
+    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center">
+      <i class="fas fa-user mr-3 text-blue-400"></i>
+      {{ .Site.Params.aboutme.title }}
+    </h2>
+    <p class="text-gray-300 leading-relaxed">{{ .Site.Params.aboutme.description }}</p>
+  </div>
+
+  <!-- Education Section -->
+  {{ if .Site.Params.education.list }}
+  <div class="bg-gray-800 rounded-lg p-8 mb-8">
+    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center">
+      <i class="fas fa-graduation-cap mr-3 text-blue-400"></i>
+      {{ .Site.Params.education.title }}
+    </h2>
+    {{ range .Site.Params.education.list }}
+    <div class="mb-4">
+      <h3 class="text-lg font-medium text-white">{{ .degree }}</h3>
+      <p class="text-gray-400">{{ .college }}</p>
+      <p class="text-sm text-gray-500">{{ .dates }}</p>
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  <!-- Skills Section -->
+  {{ if .Site.Params.skill.list }}
+  <div class="bg-gray-800 rounded-lg p-8 mb-8">
+    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center">
+      <i class="fas fa-cogs mr-3 text-blue-400"></i>
+      {{ .Site.Params.skill.title }}
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {{ range .Site.Params.skill.list }}
+      <div class="bg-gray-700 rounded-lg p-4">
+        <h3 class="text-white font-medium mb-2">{{ .skill }}</h3>
+        <div class="w-full bg-gray-600 rounded-full h-2">
+          <div class="bg-blue-500 h-2 rounded-full" style="width: {{ .skillrating }}%"></div>
+        </div>
+        <p class="text-sm text-gray-400 mt-1">{{ .skillrating }}%</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  <!-- Hobbies Section -->
+  {{ if .Site.Params.hobby.list }}
+  <div class="bg-gray-800 rounded-lg p-8 mb-8">
+    <h2 class="text-2xl font-semibold text-white mb-4 flex items-center">
+      <i class="fas fa-gamepad mr-3 text-blue-400"></i>
+      {{ .Site.Params.hobby.title }}
+    </h2>
+    <div class="flex flex-wrap gap-3">
+      {{ range .Site.Params.hobby.list }}
+      <span class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm">
+        {{ .hobby }}
+      </span>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  <!-- Recent Posts -->
+  <div class="bg-gray-800 rounded-lg p-8">
+    <h2 class="text-2xl font-semibold text-white mb-6 flex items-center">
+      <i class="fas fa-newspaper mr-3 text-blue-400"></i>
+      Bài viết gần đây
+    </h2>
+    {{ $recentPosts := where .Site.RegularPages "Section" "blog" | first 3 }}
+    {{ if $recentPosts }}
+    <div class="space-y-4">
+      {{ range $recentPosts }}
+      <div class="border-l-4 border-blue-500 pl-4 py-2">
+        <h3 class="text-lg font-medium text-white mb-1">
+          <a href="{{ .Permalink }}" class="hover:text-blue-400 transition-colors">
+            {{ .Title }}
+          </a>
+        </h3>
+        <p class="text-sm text-gray-400">{{ .Date.Format "02/01/2006" }}</p>
+        {{ if .Summary }}
+        <p class="text-gray-300 text-sm mt-2">{{ .Summary | truncate 150 }}</p>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+    <div class="mt-6 text-center">
+      <a href="{{ `blog` | relURL }}" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors">
+        Xem tất cả bài viết
+      </a>
+    </div>
+    {{ else }}
+    <p class="text-gray-400">Chưa có bài viết nào.</p>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

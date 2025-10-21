@@ -1,0 +1,56 @@
+{{ define "main" }}
+<div class="prose dark:prose-invert max-w-none">
+  <h1 class="standard {{ if eq .Kind `term` }}font-italic{{ end }}">
+    {{ if eq .Kind "term" }}#{{ .Data.Term }}{{ else }}{{- .Title -}}{{ end }}
+  </h1>
+  
+  <!-- Danh sách bài viết đơn giản -->
+  <div class="space-y-6">
+    {{ range (.Paginator 10).Pages }}
+    <article class="border-b border-gray-200 dark:border-gray-700 pb-6">
+      <div class="mb-2">
+        <h2 class="text-2xl font-bold mb-2">
+          <a href="{{ .Permalink | relURL }}" class="text-blue-600 dark:text-blue-400 hover:underline">
+            {{- .Title -}}
+          </a>
+        </h2>
+        <div class="text-sm text-gray-600 dark:text-gray-400 mb-3">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">
+            {{ .Date.Format "02/01/2006" }}
+          </time>
+          {{ if .Params.author }}
+            • Tác giả: {{ .Params.author }}
+          {{ end }}
+        </div>
+      </div>
+      
+      {{ if .Summary }}
+        <div class="text-gray-700 dark:text-gray-300 mb-3">
+          {{ .Summary | truncate 200 }}
+        </div>
+      {{ end }}
+      
+      <div class="flex items-center justify-between">
+        <a href="{{ .Permalink | relURL }}" class="text-blue-600 dark:text-blue-400 hover:underline font-medium">
+          Đọc tiếp →
+        </a>
+        
+        {{ if .Params.tags }}
+        <div class="flex flex-wrap gap-1">
+          {{ range .Params.tags }}
+          <span class="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded">
+            #{{ . }}
+          </span>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+    </article>
+    {{ end }}
+  </div>
+</div>
+
+<div class="my-6 flex justify-center pagination-links">
+  {{ template "_internal/pagination.html" (dict "page" . "format" "terse") }}
+</div>
+{{ end }}

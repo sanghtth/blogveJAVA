@@ -1,0 +1,13 @@
+<figure class="mt-6 mb-6 text-center">
+  <img
+    class="rounded-lg shadow-lg mx-auto"
+    src="{{ `images` | relURL }}/{{ .Get `src` }}"
+    alt="{{ .Get `alt` }}"
+    style="max-width: 100%; height: auto;"
+  />
+  {{ if .Get "caption" }}
+  <figcaption class="mt-3 text-sm text-gray-400">
+    <strong>{{ .Get `caption` }}</strong>
+  </figcaption>
+  {{ end }}
+</figure>
