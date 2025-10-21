@@ -1,68 +1,303 @@
-<!doctype html><html lang=VI class=dark><head><title>Lớp (Class) và Đối tượng (Object) - Cốt lõi của OOP - Blog về lập trình mạng</title><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Blog về lập trình mạng"><meta name=author content="Hoang Thanh Sang"><link rel=icon href=/blogveJAVA/favicon.ico type=image/x-icon><script src=https://cdn.tailwindcss.com></script><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel=stylesheet><style>body{font-family:inter,sans-serif}.prose{max-width:none}.prose h1,.prose h2,.prose h3,.prose h4,.prose h5,.prose h6{color:#f3f4f6}.prose p{color:#d1d5db}.prose a{color:#60a5fa;text-decoration:none}.prose a:hover{color:#93c5fd;text-decoration:underline}.prose code{background-color:#374151;color:#fbbf24;padding:.125rem .25rem;border-radius:.25rem}.prose pre{background-color:#1f2937;border:1px solid #374151}.prose blockquote{border-left:4px solid #60a5fa;background-color:#1f2937}</style></head><body class="min-h-screen bg-gray-900 text-white"><div class="container mx-auto px-4 py-8 max-w-4xl"><header class="border-b border-gray-700 pb-6 mb-8"><div class="flex items-center justify-between"><div class="flex items-center space-x-8"><a href=https://sanghtth.github.io/blogveJAVA/ class="text-2xl font-bold text-white hover:text-blue-400 transition-colors">Hoang Thanh Sang</a><nav class="hidden md:flex space-x-6"><a href=https://sanghtth.github.io/blogveJAVA/ class="text-gray-300 hover:text-white transition-colors">Trang chủ</a>
-<a href=/blogveJAVA/blog class="text-gray-300 hover:text-white transition-colors">Blog</a></nav></div><div class="flex items-center space-x-4"><a href=/blogveJAVA/search class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-search"></i></a></div></div><div class="mt-6 flex items-center space-x-4"><div class="w-16 h-16 rounded-full overflow-hidden"><img src=/blogveJAVA/images/image.jpg alt="Hoang Thanh Sang" class="w-full h-full object-cover"></div><div><h1 class="text-xl font-semibold text-white">Hoang Thanh Sang</h1><p class=text-gray-400>22/08/2004</p><p class="text-sm text-gray-500">Thu Duc, HCM City, Vietnam</p></div></div></header><main class=mt-8><article class="prose prose-lg max-w-none"><header class="mb-8 pb-6 border-b border-gray-700"><h1 class="text-4xl font-bold text-white mb-4">Lớp (Class) và Đối tượng (Object) - Cốt lõi của OOP</h1><div class="flex items-center space-x-4 text-gray-400"><time datetime=2025-10-16 class="flex items-center"><i class="fas fa-calendar mr-2"></i>
-16/10/2025
-</time><span class="flex items-center"><i class="fas fa-user mr-2"></i>
-Hoang Thanh Sang
-</span><span class="flex items-center"><i class="fas fa-clock mr-2"></i>
-3 phút đọc</span></div><div class="mt-4 flex flex-wrap gap-2"><span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">#lập trình
-</span><span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">#học tập</span></div></header><div class="content text-gray-300 leading-relaxed"><h2 id=chào-mừng-bạn-đến-với-lập-trình-hướng-đối-tượng-oop-đây-là-khái-niệm-quan-trọng-nhất-của-java><strong>Chào mừng bạn đến với Lập trình Hướng đối tượng (OOP)! Đây là khái niệm quan trọng nhất của Java.</strong></h2><p>Hãy nghĩ về thế giới thực: chúng ta được bao quanh bởi các đối tượng (con người, xe hơi, con mèo). Mỗi đối tượng có:</p><ul><li><p>Thuộc tính (Properties): Đặc điểm (ví dụ: ConMèo có mauLong, canNang).</p></li><li><p>Hành vi (Methods): Hành động (ví dụ: ConMèo có thể keu(), an()).</p></li><li><p><strong>1. Lớp (Class) - Bản thiết kế</strong></p></li><li><p>Lớp (Class) là một bản thiết kế hoặc khuôn mẫu để tạo ra các đối tượng. Lớp ConMeo định nghĩa rằng tất cả con mèo sẽ có mauLong và có thể keu().</p></li><li><p><strong>2. Đối tượng (Object) - Thể hiện</strong></p></li><li><p>Đối tượng (Object) là một thể hiện (instance) cụ thể của lớp đó. Bạn có thể tạo nhiều đối tượng từ một lớp.</p></li></ul><p>Đối tượng meoTom (từ lớp ConMeo) có mauLong là &ldquo;Xám&rdquo;.</p><p>Đối tượng meoMun (từ lớp ConMeo) có mauLong là &ldquo;Đen&rdquo;.</p><p>-<strong>Ví dụ:</strong> Xây dựng Lớp SinhVien</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#75715e>// Đây là LỚP (Bản thiết kế)</span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>SinhVien</span> {
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#75715e>// 1. Thuộc tính (Attributes / Fields)</span>
-</span></span><span style=display:flex><span>    String maSo;
-</span></span><span style=display:flex><span>    String hoTen;
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>double</span> diemTB;
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#75715e>// 2. Phương thức khởi tạo (Constructor)</span>
-</span></span><span style=display:flex><span>    <span style=color:#75715e>// Đây là phương thức đặc biệt, được gọi khi tạo đối tượng mới (dùng &#39;new&#39;)</span>
-</span></span><span style=display:flex><span>    <span style=color:#75715e>// Tên của nó phải trùng với tên Lớp</span>
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#a6e22e>SinhVien</span>(String ms, String ten, <span style=color:#66d9ef>double</span> diem) {
-</span></span><span style=display:flex><span>        <span style=color:#75715e>// &#39;this&#39; ám chỉ thuộc tính của chính đối tượng này</span>
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>maSo</span> <span style=color:#f92672>=</span> ms;
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>hoTen</span> <span style=color:#f92672>=</span> ten;
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>diemTB</span> <span style=color:#f92672>=</span> diem;
-</span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#75715e>// 3. Phương thức (Hành vi / Methods)</span>
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>hienThiThongTin</span>() {
-</span></span><span style=display:flex><span>        System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;--- Thông tin Sinh viên ---&#34;</span>);
-</span></span><span style=display:flex><span>        System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;MSSV: &#34;</span> <span style=color:#f92672>+</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>maSo</span>);
-</span></span><span style=display:flex><span>        System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Tên: &#34;</span> <span style=color:#f92672>+</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>hoTen</span>);
-</span></span><span style=display:flex><span>        System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Điểm: &#34;</span> <span style=color:#f92672>+</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>diemTB</span>);
-</span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>boolean</span> <span style=color:#a6e22e>kiemTraHocBong</span>() {
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>diemTB</span> <span style=color:#f92672>&gt;=</span> 8.<span style=color:#a6e22e>0</span>;
-</span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>}
-</span></span></code></pre></div><ul><li><strong>Sử dụng Lớp SinhVien để tạo Đối tượng:</strong></li></ul><p>Bây giờ, trong file QuanLyTruongHoc.java (hoặc file có hàm main):</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>QuanLyTruongHoc</span> {
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span>(String<span style=color:#f92672>[]</span> args) {
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:#75715e>// Tạo 2 ĐỐI TƯỢNG (instances) từ lớp SinhVien</span>
-</span></span><span style=display:flex><span>        <span style=color:#75715e>// Chúng ta gọi Constructor bằng từ khóa &#39;new&#39;</span>
-</span></span><span style=display:flex><span>        SinhVien sv1 <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> SinhVien(<span style=color:#e6db74>&#34;SV001&#34;</span>, <span style=color:#e6db74>&#34;Nguyễn Văn A&#34;</span>, 7.<span style=color:#a6e22e>5</span>);
-</span></span><span style=display:flex><span>        SinhVien sv2 <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> SinhVien(<span style=color:#e6db74>&#34;SV002&#34;</span>, <span style=color:#e6db74>&#34;Trần Thị B&#34;</span>, 8.<span style=color:#a6e22e>5</span>);
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:#75715e>// Gọi phương thức (hành vi) của từng đối tượng</span>
-</span></span><span style=display:flex><span>        sv1.<span style=color:#a6e22e>hienThiThongTin</span>();
-</span></span><span style=display:flex><span>        <span style=color:#75715e>// Output:</span>
-</span></span><span style=display:flex><span>        <span style=color:#75715e>// --- Thông tin Sinh viên ---</span>
-</span></span><span style=display:flex><span>        <span style=color:#75715e>// MSSV: SV001</span>
-</span></span><span style=display:flex><span>        <span style=color:#75715e>// Tên: Nguyễn Văn A</span>
-</span></span><span style=display:flex><span>        <span style=color:#75715e>// Điểm: 7.5</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        sv2.<span style=color:#a6e22e>hienThiThongTin</span>();
-</span></span><span style=display:flex><span>        <span style=color:#75715e>// Output:</span>
-</span></span><span style=display:flex><span>        <span style=color:#75715e>// --- Thông tin Sinh viên ---</span>
-</span></span><span style=display:flex><span>        <span style=color:#75715e>// MSSV: SV002</span>
-</span></span><span style=display:flex><span>        <span style=color:#75715e>// Tên: Trần Thị B</span>
-</span></span><span style=display:flex><span>        <span style=color:#75715e>// Điểm: 8.5</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:#75715e>// Kiểm tra học bổng</span>
-</span></span><span style=display:flex><span>        System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;SV1 có học bổng? &#34;</span> <span style=color:#f92672>+</span> sv1.<span style=color:#a6e22e>kiemTraHocBong</span>()); <span style=color:#75715e>// false</span>
-</span></span><span style=display:flex><span>        System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;SV2 có học bổng? &#34;</span> <span style=color:#f92672>+</span> sv2.<span style=color:#a6e22e>kiemTraHocBong</span>()); <span style=color:#75715e>// true</span>
-</span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>}
-</span></span></code></pre></div></div><footer class="mt-12 pt-6 border-t border-gray-700"><div class="flex items-center space-x-4 mb-6"><div class="w-12 h-12 rounded-full overflow-hidden"><img src=/blogveJAVA/images/image.jpg alt="Hoang Thanh Sang" class="w-full h-full object-cover"></div><div><h3 class="text-white font-medium">Hoang Thanh Sang</h3><p class="text-gray-400 text-sm"></p></div></div><div class="flex justify-between items-center mt-8"><div class=flex-1><a href=/blogveJAVA/blog/post9/ class="flex items-center space-x-3 text-blue-400 hover:text-blue-300 transition-colors"><i class="fas fa-arrow-left"></i><div><p class="text-sm text-gray-500">Bài trước</p><p class=font-medium>Xử lý sự cố - Exception Handling (Try-Catch)</p></div></a></div><div class="flex-1 text-right"><a href=/blogveJAVA/blog/markdown_syntax/ class="flex items-center space-x-3 text-blue-400 hover:text-blue-300 transition-colors justify-end"><div class=text-right><p class="text-sm text-gray-500">Bài tiếp theo</p><p class=font-medium>Lập trình với JAVA</p></div><i class="fas fa-arrow-right"></i></a></div></div></footer></article></main><footer class="mt-16 pt-8 border-t border-gray-700 text-center"><div class="text-gray-400 text-sm"><p>powered by <a href=https://gohugo.io/>hugo</a></p><p class=mt-2>© 2025 Hoang Thanh Sang. Tất cả quyền được bảo lưu.</p></div><div class="mt-4 flex justify-center space-x-4"><a href=# class="text-gray-400 hover:text-white transition-colors" title=GitHub><i class="fab fa-github text-lg"></i>
-</a><a href=# class="text-gray-400 hover:text-white transition-colors" title="Google Scholar"><i class="ai ai-google-scholar text-lg"></i>
-</a><a href=# class="text-gray-400 hover:text-white transition-colors" title=ResearchGate><i class="fab fa-researchgate text-lg"></i></a></div></footer></div></body></html>
+<!DOCTYPE html>
+<html lang="VI" class="dark"><head><script src="/blogveJAVA/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blogveJAVA/livereload" data-no-instant defer></script>
+  
+  <title>Lớp (Class) và Đối tượng (Object) - Cốt lõi của OOP - Blog về lập trình mạng</title>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blog về lập trình mạng" />
+  <meta name="author" content="Hoang Thanh Sang" />
+  <link rel="icon" href="/blogveJAVA/favicon.ico" type="image/x-icon" />
+  
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .prose {
+      max-width: none;
+    }
+    .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+      color: #f3f4f6;
+    }
+    .prose p {
+      color: #d1d5db;
+    }
+    .prose a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+    .prose a:hover {
+      color: #93c5fd;
+      text-decoration: underline;
+    }
+    .prose code {
+      background-color: #374151;
+      color: #fbbf24;
+      padding: 0.125rem 0.25rem;
+      border-radius: 0.25rem;
+    }
+    .prose pre {
+      background-color: #1f2937;
+      border: 1px solid #374151;
+    }
+    .prose blockquote {
+      border-left: 4px solid #60a5fa;
+      background-color: #1f2937;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gray-900 text-white">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+      <header class="border-b border-gray-700 pb-6 mb-8">
+  <div class="flex items-center justify-between">
+    <div class="flex items-center space-x-8">
+      <a href="http://localhost:1313/blogveJAVA/" class="text-2xl font-bold text-white hover:text-blue-400 transition-colors">
+        Hoang Thanh Sang
+      </a>
+      <nav class="hidden md:flex space-x-6">
+        <a href="http://localhost:1313/blogveJAVA/" class="text-gray-300 hover:text-white transition-colors">Trang chủ</a>
+        <a href="/blogveJAVA/blog" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+      </nav>
+    </div>
+    <div class="flex items-center space-x-4">
+      <a href="/blogveJAVA/search" class="text-gray-300 hover:text-white transition-colors">
+        <i class="fas fa-search"></i>
+      </a>
+    </div>
+  </div>
+  
+  
+  <div class="mt-6 flex items-center space-x-4">
+    <div class="w-16 h-16 rounded-full overflow-hidden">
+      <img 
+        src="/blogveJAVA/images/image.jpg" 
+        alt="Hoang Thanh Sang"
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <div>
+      <h1 class="text-xl font-semibold text-white">Hoang Thanh Sang</h1>
+      <p class="text-gray-400">22/08/2004</p>
+      <p class="text-sm text-gray-500">Thu Duc, HCM City, Vietnam</p>
+    </div>
+  </div>
+</header>
+
+      <main class="mt-8">
+<article class="prose prose-lg max-w-none">
+  
+  <header class="mb-8 pb-6 border-b border-gray-700">
+    <h1 class="text-4xl font-bold text-white mb-4">Lớp (Class) và Đối tượng (Object) - Cốt lõi của OOP</h1>
+    <div class="flex items-center space-x-4 text-gray-400">
+      <time datetime="2025-10-16" class="flex items-center">
+        <i class="fas fa-calendar mr-2"></i>
+        16/10/2025
+      </time>
+      
+      <span class="flex items-center">
+        <i class="fas fa-user mr-2"></i>
+        Hoang Thanh Sang
+      </span>
+      
+      
+      <span class="flex items-center">
+        <i class="fas fa-clock mr-2"></i>
+        3 phút đọc
+      </span>
+      
+    </div>
+    
+    
+    <div class="mt-4 flex flex-wrap gap-2">
+      
+      <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+        #lập trình
+      </span>
+      
+      <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+        #học tập
+      </span>
+      
+    </div>
+    
+  </header>
+
+  
+  <div class="content text-gray-300 leading-relaxed">
+    <h2 id="chào-mừng-bạn-đến-với-lập-trình-hướng-đối-tượng-oop-đây-là-khái-niệm-quan-trọng-nhất-của-java"><strong>Chào mừng bạn đến với Lập trình Hướng đối tượng (OOP)! Đây là khái niệm quan trọng nhất của Java.</strong></h2>
+<p>Hãy nghĩ về thế giới thực: chúng ta được bao quanh bởi các đối tượng (con người, xe hơi, con mèo). Mỗi đối tượng có:</p>
+<ul>
+<li>
+<p>Thuộc tính (Properties): Đặc điểm (ví dụ: ConMèo có mauLong, canNang).</p>
+</li>
+<li>
+<p>Hành vi (Methods): Hành động (ví dụ: ConMèo có thể keu(), an()).</p>
+</li>
+<li>
+<p><strong>1. Lớp (Class) - Bản thiết kế</strong></p>
+</li>
+<li>
+<p>Lớp (Class) là một bản thiết kế hoặc khuôn mẫu để tạo ra các đối tượng. Lớp ConMeo định nghĩa rằng tất cả con mèo sẽ có mauLong và có thể keu().</p>
+</li>
+<li>
+<p><strong>2. Đối tượng (Object) - Thể hiện</strong></p>
+</li>
+<li>
+<p>Đối tượng (Object) là một thể hiện (instance) cụ thể của lớp đó. Bạn có thể tạo nhiều đối tượng từ một lớp.</p>
+</li>
+</ul>
+<p>Đối tượng meoTom (từ lớp ConMeo) có mauLong là &ldquo;Xám&rdquo;.</p>
+<p>Đối tượng meoMun (từ lớp ConMeo) có mauLong là &ldquo;Đen&rdquo;.</p>
+<p>-<strong>Ví dụ:</strong> Xây dựng Lớp SinhVien</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Đây là LỚP (Bản thiết kế)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SinhVien</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 1. Thuộc tính (Attributes / Fields)</span>
+</span></span><span style="display:flex;"><span>    String maSo;
+</span></span><span style="display:flex;"><span>    String hoTen;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">double</span> diemTB;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 2. Phương thức khởi tạo (Constructor)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Đây là phương thức đặc biệt, được gọi khi tạo đối tượng mới (dùng &#39;new&#39;)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Tên của nó phải trùng với tên Lớp</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">SinhVien</span>(String ms, String ten, <span style="color:#66d9ef">double</span> diem) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// &#39;this&#39; ám chỉ thuộc tính của chính đối tượng này</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">maSo</span> <span style="color:#f92672">=</span> ms;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">hoTen</span> <span style="color:#f92672">=</span> ten;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">diemTB</span> <span style="color:#f92672">=</span> diem;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 3. Phương thức (Hành vi / Methods)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">hienThiThongTin</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;--- Thông tin Sinh viên ---&#34;</span>);
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;MSSV: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">maSo</span>);
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Tên: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">hoTen</span>);
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Điểm: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">diemTB</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">kiemTraHocBong</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">diemTB</span> <span style="color:#f92672">&gt;=</span> 8.<span style="color:#a6e22e">0</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li><strong>Sử dụng Lớp SinhVien để tạo Đối tượng:</strong></li>
+</ul>
+<p>Bây giờ, trong file QuanLyTruongHoc.java (hoặc file có hàm main):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">QuanLyTruongHoc</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Tạo 2 ĐỐI TƯỢNG (instances) từ lớp SinhVien</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Chúng ta gọi Constructor bằng từ khóa &#39;new&#39;</span>
+</span></span><span style="display:flex;"><span>        SinhVien sv1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SinhVien(<span style="color:#e6db74">&#34;SV001&#34;</span>, <span style="color:#e6db74">&#34;Nguyễn Văn A&#34;</span>, 7.<span style="color:#a6e22e">5</span>);
+</span></span><span style="display:flex;"><span>        SinhVien sv2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SinhVien(<span style="color:#e6db74">&#34;SV002&#34;</span>, <span style="color:#e6db74">&#34;Trần Thị B&#34;</span>, 8.<span style="color:#a6e22e">5</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Gọi phương thức (hành vi) của từng đối tượng</span>
+</span></span><span style="display:flex;"><span>        sv1.<span style="color:#a6e22e">hienThiThongTin</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Output:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// --- Thông tin Sinh viên ---</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// MSSV: SV001</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Tên: Nguyễn Văn A</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Điểm: 7.5</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        sv2.<span style="color:#a6e22e">hienThiThongTin</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Output:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// --- Thông tin Sinh viên ---</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// MSSV: SV002</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Tên: Trần Thị B</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Điểm: 8.5</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Kiểm tra học bổng</span>
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;SV1 có học bổng? &#34;</span> <span style="color:#f92672">+</span> sv1.<span style="color:#a6e22e">kiemTraHocBong</span>()); <span style="color:#75715e">// false</span>
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;SV2 có học bổng? &#34;</span> <span style="color:#f92672">+</span> sv2.<span style="color:#a6e22e">kiemTraHocBong</span>()); <span style="color:#75715e">// true</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+  </div>
+
+  
+  <footer class="mt-12 pt-6 border-t border-gray-700">
+    
+    <div class="flex items-center space-x-4 mb-6">
+      <div class="w-12 h-12 rounded-full overflow-hidden">
+        <img 
+          src="/blogveJAVA/images/image.jpg" 
+          alt="Hoang Thanh Sang"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div>
+        <h3 class="text-white font-medium">Hoang Thanh Sang</h3>
+        <p class="text-gray-400 text-sm"></p>
+      </div>
+    </div>
+    
+
+    
+    <div class="flex justify-between items-center mt-8">
+  <div class="flex-1">
+    
+    <a href="/blogveJAVA/blog/post9/" class="flex items-center space-x-3 text-blue-400 hover:text-blue-300 transition-colors">
+      <i class="fas fa-arrow-left"></i>
+      <div>
+        <p class="text-sm text-gray-500">Bài trước</p>
+        <p class="font-medium">Xử lý sự cố - Exception Handling (Try-Catch)</p>
+      </div>
+    </a>
+    
+  </div>
+  
+  <div class="flex-1 text-right">
+    
+    <a href="/blogveJAVA/blog/markdown_syntax/" class="flex items-center space-x-3 text-blue-400 hover:text-blue-300 transition-colors justify-end">
+      <div class="text-right">
+        <p class="text-sm text-gray-500">Bài tiếp theo</p>
+        <p class="font-medium">Lập trình với JAVA</p>
+      </div>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+    
+  </div>
+</div>
+
+  </footer>
+</article>
+
+      </main>
+      <footer class="mt-16 pt-8 border-t border-gray-700 text-center">
+  <div class="text-gray-400 text-sm">
+    <p>powered by <a href="https://gohugo.io/">hugo</a></p>
+    <p class="mt-2">© 2025 Hoang Thanh Sang. Tất cả quyền được bảo lưu.</p>
+  </div>
+  
+  
+  
+  <div class="mt-4 flex justify-center space-x-4">
+    
+    <a href="#" class="text-gray-400 hover:text-white transition-colors" title="GitHub">
+      <i class="fab fa-github text-lg"></i>
+    </a>
+    
+    <a href="#" class="text-gray-400 hover:text-white transition-colors" title="Google Scholar">
+      <i class="ai ai-google-scholar text-lg"></i>
+    </a>
+    
+    <a href="#" class="text-gray-400 hover:text-white transition-colors" title="ResearchGate">
+      <i class="fab fa-researchgate text-lg"></i>
+    </a>
+    
+  </div>
+  
+</footer>
+
+    </div>
+  </body>
+</html>

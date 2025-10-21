@@ -1,15 +1,256 @@
-<!doctype html><html lang=VI class=dark><head><title>Chào thế giới Java! ☕ Cài đặt JDK và Viết chương trình đầu tiên - Blog về lập trình mạng</title><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Blog về lập trình mạng"><meta name=author content="Hoang Thanh Sang"><link rel=icon href=/blogveJAVA/favicon.ico type=image/x-icon><script src=https://cdn.tailwindcss.com></script><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel=stylesheet><style>body{font-family:inter,sans-serif}.prose{max-width:none}.prose h1,.prose h2,.prose h3,.prose h4,.prose h5,.prose h6{color:#f3f4f6}.prose p{color:#d1d5db}.prose a{color:#60a5fa;text-decoration:none}.prose a:hover{color:#93c5fd;text-decoration:underline}.prose code{background-color:#374151;color:#fbbf24;padding:.125rem .25rem;border-radius:.25rem}.prose pre{background-color:#1f2937;border:1px solid #374151}.prose blockquote{border-left:4px solid #60a5fa;background-color:#1f2937}</style></head><body class="min-h-screen bg-gray-900 text-white"><div class="container mx-auto px-4 py-8 max-w-4xl"><header class="border-b border-gray-700 pb-6 mb-8"><div class="flex items-center justify-between"><div class="flex items-center space-x-8"><a href=https://sanghtth.github.io/blogveJAVA/ class="text-2xl font-bold text-white hover:text-blue-400 transition-colors">Hoang Thanh Sang</a><nav class="hidden md:flex space-x-6"><a href=https://sanghtth.github.io/blogveJAVA/ class="text-gray-300 hover:text-white transition-colors">Trang chủ</a>
-<a href=/blogveJAVA/blog class="text-gray-300 hover:text-white transition-colors">Blog</a></nav></div><div class="flex items-center space-x-4"><a href=/blogveJAVA/search class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-search"></i></a></div></div><div class="mt-6 flex items-center space-x-4"><div class="w-16 h-16 rounded-full overflow-hidden"><img src=/blogveJAVA/images/image.jpg alt="Hoang Thanh Sang" class="w-full h-full object-cover"></div><div><h1 class="text-xl font-semibold text-white">Hoang Thanh Sang</h1><p class=text-gray-400>22/08/2004</p><p class="text-sm text-gray-500">Thu Duc, HCM City, Vietnam</p></div></div></header><main class=mt-8><article class="prose prose-lg max-w-none"><header class="mb-8 pb-6 border-b border-gray-700"><h1 class="text-4xl font-bold text-white mb-4">Chào thế giới Java! ☕ Cài đặt JDK và Viết chương trình đầu tiên</h1><div class="flex items-center space-x-4 text-gray-400"><time datetime=2025-01-16 class="flex items-center"><i class="fas fa-calendar mr-2"></i>
-16/01/2025
-</time><span class="flex items-center"><i class="fas fa-user mr-2"></i>
-Hoang Thanh Sang
-</span><span class="flex items-center"><i class="fas fa-clock mr-2"></i>
-1 phút đọc</span></div><div class="mt-4 flex flex-wrap gap-2"><span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">#lập trình
-</span><span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">#học tập</span></div></header><div class="content text-gray-300 leading-relaxed"><h2 id=chào-mừng-các-bạn-đến-với-loạt-bài-học-lập-trình-java-java-là-một-trong-những-ngôn-ngữ-lập-trình-phổ-biến-nhất-thế-giới-chạy-trên-hàng-tỷ-thiết-bị-nó-nổi-tiếng-với-triết-lý-write-once-run-anywhere-viết-một-lần-chạy-mọi-nơi>Chào mừng các bạn đến với loạt bài học lập trình Java! Java là một trong những ngôn ngữ lập trình phổ biến nhất thế giới, chạy trên hàng tỷ thiết bị. Nó nổi tiếng với triết lý &ldquo;Write Once, Run Anywhere&rdquo; (Viết một lần, chạy mọi nơi).</h2><hr><h2 id=1-jdk-jre-và-jvm-là-gì><strong>1. JDK, JRE, và JVM là gì?</strong></h2><ul><li><p>JVM (Java Virtual Machine): Máy ảo Java, là môi trường thực thi code. Đây là lý do Java chạy được mọi nơi.</p></li><li><p>JRE (Java Runtime Environment): Môi trường chạy Java, bao gồm JVM và các thư viện cần thiết để chạy ứng dụng.</p></li><li><p>JDK (Java Development Kit): Bộ công cụ phát triển Java, bao gồm JRE và các công cụ cho lập trình viên (như trình biên dịch javac).</p></li><li><p>Để lập trình, bạn cần cài đặt JDK.</p></li></ul><h2 id=2-viết-chương-trình><strong>2. Viết Chương trình &ldquo;Hello, World!&rdquo;</strong></h2><ul><li>Sau khi cài đặt JDK và một IDE (như IntelliJ, Eclipse, hoặc VS Code), hãy tạo file đầu tiên: HelloWorld.java.</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>HelloWorld</span> {
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span>(String<span style=color:#f92672>[]</span> args) {
-</span></span><span style=display:flex><span>        System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Hello, World!&#34;</span>);
-</span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>}
-</span></span></code></pre></div><ul><li><p><strong>Cách chạy (trên terminal/cmd):</strong></p></li><li><p>Biên dịch code: javac HelloWorld.java (Thao tác này tạo ra file HelloWorld.class)</p></li><li><p>Chạy chương trình: java HelloWorld</p></li><li><p>Kết quả: Hello, World!</p></li></ul><h2></h2></div><footer class="mt-12 pt-6 border-t border-gray-700"><div class="flex items-center space-x-4 mb-6"><div class="w-12 h-12 rounded-full overflow-hidden"><img src=/blogveJAVA/images/image.jpg alt="Hoang Thanh Sang" class="w-full h-full object-cover"></div><div><h3 class="text-white font-medium">Hoang Thanh Sang</h3><p class="text-gray-400 text-sm"></p></div></div><div class="flex justify-between items-center mt-8"><div class=flex-1><a href=/blogveJAVA/blog/post3/ class="flex items-center space-x-3 text-blue-400 hover:text-blue-300 transition-colors"><i class="fas fa-arrow-left"></i><div><p class="text-sm text-gray-500">Bài trước</p><p class=font-medium>Công cụ xử lý - Toán tử (Operators) trong Java</p></div></a></div><div class="flex-1 text-right"><a href=/blogveJAVA/blog/post9/ class="flex items-center space-x-3 text-blue-400 hover:text-blue-300 transition-colors justify-end"><div class=text-right><p class="text-sm text-gray-500">Bài tiếp theo</p><p class=font-medium>Xử lý sự cố - Exception Handling (Try-Catch)</p></div><i class="fas fa-arrow-right"></i></a></div></div></footer></article></main><footer class="mt-16 pt-8 border-t border-gray-700 text-center"><div class="text-gray-400 text-sm"><p>powered by <a href=https://gohugo.io/>hugo</a></p><p class=mt-2>© 2025 Hoang Thanh Sang. Tất cả quyền được bảo lưu.</p></div><div class="mt-4 flex justify-center space-x-4"><a href=# class="text-gray-400 hover:text-white transition-colors" title=GitHub><i class="fab fa-github text-lg"></i>
-</a><a href=# class="text-gray-400 hover:text-white transition-colors" title="Google Scholar"><i class="ai ai-google-scholar text-lg"></i>
-</a><a href=# class="text-gray-400 hover:text-white transition-colors" title=ResearchGate><i class="fab fa-researchgate text-lg"></i></a></div></footer></div></body></html>
+<!DOCTYPE html>
+<html lang="VI" class="dark"><head><script src="/blogveJAVA/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blogveJAVA/livereload" data-no-instant defer></script>
+  
+  <title>Chào thế giới Java! ☕ Cài đặt JDK và Viết chương trình đầu tiên - Blog về lập trình mạng</title>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blog về lập trình mạng" />
+  <meta name="author" content="Hoang Thanh Sang" />
+  <link rel="icon" href="/blogveJAVA/favicon.ico" type="image/x-icon" />
+  
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .prose {
+      max-width: none;
+    }
+    .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+      color: #f3f4f6;
+    }
+    .prose p {
+      color: #d1d5db;
+    }
+    .prose a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+    .prose a:hover {
+      color: #93c5fd;
+      text-decoration: underline;
+    }
+    .prose code {
+      background-color: #374151;
+      color: #fbbf24;
+      padding: 0.125rem 0.25rem;
+      border-radius: 0.25rem;
+    }
+    .prose pre {
+      background-color: #1f2937;
+      border: 1px solid #374151;
+    }
+    .prose blockquote {
+      border-left: 4px solid #60a5fa;
+      background-color: #1f2937;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gray-900 text-white">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+      <header class="border-b border-gray-700 pb-6 mb-8">
+  <div class="flex items-center justify-between">
+    <div class="flex items-center space-x-8">
+      <a href="http://localhost:1313/blogveJAVA/" class="text-2xl font-bold text-white hover:text-blue-400 transition-colors">
+        Hoang Thanh Sang
+      </a>
+      <nav class="hidden md:flex space-x-6">
+        <a href="http://localhost:1313/blogveJAVA/" class="text-gray-300 hover:text-white transition-colors">Trang chủ</a>
+        <a href="/blogveJAVA/blog" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+      </nav>
+    </div>
+    <div class="flex items-center space-x-4">
+      <a href="/blogveJAVA/search" class="text-gray-300 hover:text-white transition-colors">
+        <i class="fas fa-search"></i>
+      </a>
+    </div>
+  </div>
+  
+  
+  <div class="mt-6 flex items-center space-x-4">
+    <div class="w-16 h-16 rounded-full overflow-hidden">
+      <img 
+        src="/blogveJAVA/images/image.jpg" 
+        alt="Hoang Thanh Sang"
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <div>
+      <h1 class="text-xl font-semibold text-white">Hoang Thanh Sang</h1>
+      <p class="text-gray-400">22/08/2004</p>
+      <p class="text-sm text-gray-500">Thu Duc, HCM City, Vietnam</p>
+    </div>
+  </div>
+</header>
+
+      <main class="mt-8">
+<article class="prose prose-lg max-w-none">
+  
+  <header class="mb-8 pb-6 border-b border-gray-700">
+    <h1 class="text-4xl font-bold text-white mb-4">Chào thế giới Java! ☕ Cài đặt JDK và Viết chương trình đầu tiên</h1>
+    <div class="flex items-center space-x-4 text-gray-400">
+      <time datetime="2025-01-16" class="flex items-center">
+        <i class="fas fa-calendar mr-2"></i>
+        16/01/2025
+      </time>
+      
+      <span class="flex items-center">
+        <i class="fas fa-user mr-2"></i>
+        Hoang Thanh Sang
+      </span>
+      
+      
+      <span class="flex items-center">
+        <i class="fas fa-clock mr-2"></i>
+        1 phút đọc
+      </span>
+      
+    </div>
+    
+    
+    <div class="mt-4 flex flex-wrap gap-2">
+      
+      <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+        #lập trình
+      </span>
+      
+      <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+        #học tập
+      </span>
+      
+    </div>
+    
+  </header>
+
+  
+  <div class="content text-gray-300 leading-relaxed">
+    <h2 id="chào-mừng-các-bạn-đến-với-loạt-bài-học-lập-trình-java-java-là-một-trong-những-ngôn-ngữ-lập-trình-phổ-biến-nhất-thế-giới-chạy-trên-hàng-tỷ-thiết-bị-nó-nổi-tiếng-với-triết-lý-write-once-run-anywhere-viết-một-lần-chạy-mọi-nơi">Chào mừng các bạn đến với loạt bài học lập trình Java! Java là một trong những ngôn ngữ lập trình phổ biến nhất thế giới, chạy trên hàng tỷ thiết bị. Nó nổi tiếng với triết lý &ldquo;Write Once, Run Anywhere&rdquo; (Viết một lần, chạy mọi nơi).</h2>
+<hr>
+<h2 id="1-jdk-jre-và-jvm-là-gì"><strong>1. JDK, JRE, và JVM là gì?</strong></h2>
+<ul>
+<li>
+<p>JVM (Java Virtual Machine): Máy ảo Java, là môi trường thực thi code. Đây là lý do Java chạy được mọi nơi.</p>
+</li>
+<li>
+<p>JRE (Java Runtime Environment): Môi trường chạy Java, bao gồm JVM và các thư viện cần thiết để chạy ứng dụng.</p>
+</li>
+<li>
+<p>JDK (Java Development Kit): Bộ công cụ phát triển Java, bao gồm JRE và các công cụ cho lập trình viên (như trình biên dịch javac).</p>
+</li>
+<li>
+<p>Để lập trình, bạn cần cài đặt JDK.</p>
+</li>
+</ul>
+<h2 id="2-viết-chương-trình"><strong>2. Viết Chương trình &ldquo;Hello, World!&rdquo;</strong></h2>
+<ul>
+<li>Sau khi cài đặt JDK và một IDE (như IntelliJ, Eclipse, hoặc VS Code), hãy tạo file đầu tiên: HelloWorld.java.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HelloWorld</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Hello, World!&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>
+<p><strong>Cách chạy (trên terminal/cmd):</strong></p>
+</li>
+<li>
+<p>Biên dịch code: javac HelloWorld.java (Thao tác này tạo ra file HelloWorld.class)</p>
+</li>
+<li>
+<p>Chạy chương trình: java HelloWorld</p>
+</li>
+<li>
+<p>Kết quả: Hello, World!</p>
+</li>
+</ul>
+<h2></h2>
+  </div>
+
+  
+  <footer class="mt-12 pt-6 border-t border-gray-700">
+    
+    <div class="flex items-center space-x-4 mb-6">
+      <div class="w-12 h-12 rounded-full overflow-hidden">
+        <img 
+          src="/blogveJAVA/images/image.jpg" 
+          alt="Hoang Thanh Sang"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div>
+        <h3 class="text-white font-medium">Hoang Thanh Sang</h3>
+        <p class="text-gray-400 text-sm"></p>
+      </div>
+    </div>
+    
+
+    
+    <div class="flex justify-between items-center mt-8">
+  <div class="flex-1">
+    
+    <a href="/blogveJAVA/blog/post3/" class="flex items-center space-x-3 text-blue-400 hover:text-blue-300 transition-colors">
+      <i class="fas fa-arrow-left"></i>
+      <div>
+        <p class="text-sm text-gray-500">Bài trước</p>
+        <p class="font-medium">Công cụ xử lý - Toán tử (Operators) trong Java</p>
+      </div>
+    </a>
+    
+  </div>
+  
+  <div class="flex-1 text-right">
+    
+    <a href="/blogveJAVA/blog/post9/" class="flex items-center space-x-3 text-blue-400 hover:text-blue-300 transition-colors justify-end">
+      <div class="text-right">
+        <p class="text-sm text-gray-500">Bài tiếp theo</p>
+        <p class="font-medium">Xử lý sự cố - Exception Handling (Try-Catch)</p>
+      </div>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+    
+  </div>
+</div>
+
+  </footer>
+</article>
+
+      </main>
+      <footer class="mt-16 pt-8 border-t border-gray-700 text-center">
+  <div class="text-gray-400 text-sm">
+    <p>powered by <a href="https://gohugo.io/">hugo</a></p>
+    <p class="mt-2">© 2025 Hoang Thanh Sang. Tất cả quyền được bảo lưu.</p>
+  </div>
+  
+  
+  
+  <div class="mt-4 flex justify-center space-x-4">
+    
+    <a href="#" class="text-gray-400 hover:text-white transition-colors" title="GitHub">
+      <i class="fab fa-github text-lg"></i>
+    </a>
+    
+    <a href="#" class="text-gray-400 hover:text-white transition-colors" title="Google Scholar">
+      <i class="ai ai-google-scholar text-lg"></i>
+    </a>
+    
+    <a href="#" class="text-gray-400 hover:text-white transition-colors" title="ResearchGate">
+      <i class="fab fa-researchgate text-lg"></i>
+    </a>
+    
+  </div>
+  
+</footer>
+
+    </div>
+  </body>
+</html>

@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on Blog về lập trình mạng</title><link>https://sanghtth.github.io/blogveJAVA/tags/</link><description>Recent content in Tags on Blog về lập trình mạng</description><generator>Hugo</generator><language>VI</language><lastBuildDate>Thu, 16 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sanghtth.github.io/blogveJAVA/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>Học Tập</title><link>https://sanghtth.github.io/blogveJAVA/tags/h%E1%BB%8Dc-t%E1%BA%ADp/</link><pubDate>Thu, 16 Oct 2025 00:00:00 +0000</pubDate><guid>https://sanghtth.github.io/blogveJAVA/tags/h%E1%BB%8Dc-t%E1%BA%ADp/</guid><description/></item><item><title>Lập Trình</title><link>https://sanghtth.github.io/blogveJAVA/tags/l%E1%BA%ADp-tr%C3%ACnh/</link><pubDate>Thu, 16 Oct 2025 00:00:00 +0000</pubDate><guid>https://sanghtth.github.io/blogveJAVA/tags/l%E1%BA%ADp-tr%C3%ACnh/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Blog về lập trình mạng</title>
+    <link>http://localhost:1313/blogveJAVA/tags/</link>
+    <description>Recent content in Tags on Blog về lập trình mạng</description>
+    <generator>Hugo</generator>
+    <language>VI</language>
+    <lastBuildDate>Thu, 16 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blogveJAVA/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Học Tập</title>
+      <link>http://localhost:1313/blogveJAVA/tags/h%E1%BB%8Dc-t%E1%BA%ADp/</link>
+      <pubDate>Thu, 16 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blogveJAVA/tags/h%E1%BB%8Dc-t%E1%BA%ADp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lập Trình</title>
+      <link>http://localhost:1313/blogveJAVA/tags/l%E1%BA%ADp-tr%C3%ACnh/</link>
+      <pubDate>Thu, 16 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blogveJAVA/tags/l%E1%BA%ADp-tr%C3%ACnh/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
