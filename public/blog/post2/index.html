@@ -1,272 +1,30 @@
-<!DOCTYPE html>
-<html lang="VI" class="dark"><head><script src="/blogveJAVA/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blogveJAVA/livereload" data-no-instant defer></script>
-  
-  <title>Cửa hàng dữ liệu - Biến và Các kiểu dữ liệu cơ bản - Blog về lập trình mạng</title>
-  
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Blog về lập trình mạng" />
-  <meta name="author" content="Hoang Thanh Sang" />
-  <link rel="icon" href="/blogveJAVA/favicon.ico" type="image/x-icon" />
-  
-  
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  
-  
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    .prose {
-      max-width: none;
-    }
-    .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
-      color: #f3f4f6;
-    }
-    .prose p {
-      color: #d1d5db;
-    }
-    .prose a {
-      color: #60a5fa;
-      text-decoration: none;
-    }
-    .prose a:hover {
-      color: #93c5fd;
-      text-decoration: underline;
-    }
-    .prose code {
-      background-color: #374151;
-      color: #fbbf24;
-      padding: 0.125rem 0.25rem;
-      border-radius: 0.25rem;
-    }
-    .prose pre {
-      background-color: #1f2937;
-      border: 1px solid #374151;
-    }
-    .prose blockquote {
-      border-left: 4px solid #60a5fa;
-      background-color: #1f2937;
-    }
-  </style>
-</head>
-<body class="min-h-screen bg-gray-900 text-white">
-    <div class="container mx-auto px-4 py-8 max-w-4xl">
-      <header class="border-b border-gray-700 pb-6 mb-8">
-  <div class="flex items-center justify-between">
-    <div class="flex items-center space-x-8">
-      <a href="http://localhost:1313/blogveJAVA/" class="text-2xl font-bold text-white hover:text-blue-400 transition-colors">
-        Hoang Thanh Sang
-      </a>
-      <nav class="hidden md:flex space-x-6">
-        <a href="http://localhost:1313/blogveJAVA/" class="text-gray-300 hover:text-white transition-colors">Trang chủ</a>
-        <a href="/blogveJAVA/blog" class="text-gray-300 hover:text-white transition-colors">Blog</a>
-      </nav>
-    </div>
-    <div class="flex items-center space-x-4">
-      <a href="/blogveJAVA/search" class="text-gray-300 hover:text-white transition-colors">
-        <i class="fas fa-search"></i>
-      </a>
-    </div>
-  </div>
-  
-  
-  <div class="mt-6 flex items-center space-x-4">
-    <div class="w-16 h-16 rounded-full overflow-hidden">
-      <img 
-        src="/blogveJAVA/images/image.jpg" 
-        alt="Hoang Thanh Sang"
-        class="w-full h-full object-cover"
-      />
-    </div>
-    <div>
-      <h1 class="text-xl font-semibold text-white">Hoang Thanh Sang</h1>
-      <p class="text-gray-400">22/08/2004</p>
-      <p class="text-sm text-gray-500">Thu Duc, HCM City, Vietnam</p>
-    </div>
-  </div>
-</header>
-
-      <main class="mt-8">
-<article class="prose prose-lg max-w-none">
-  
-  <header class="mb-8 pb-6 border-b border-gray-700">
-    <h1 class="text-4xl font-bold text-white mb-4">Cửa hàng dữ liệu - Biến và Các kiểu dữ liệu cơ bản</h1>
-    <div class="flex items-center space-x-4 text-gray-400">
-      <time datetime="2025-01-16" class="flex items-center">
-        <i class="fas fa-calendar mr-2"></i>
-        16/01/2025
-      </time>
-      
-      <span class="flex items-center">
-        <i class="fas fa-user mr-2"></i>
-        Hoang Thanh Sang
-      </span>
-      
-      
-      <span class="flex items-center">
-        <i class="fas fa-clock mr-2"></i>
-        2 phút đọc
-      </span>
-      
-    </div>
-    
-    
-    <div class="mt-4 flex flex-wrap gap-2">
-      
-      <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
-        #lập trình
-      </span>
-      
-      <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
-        #học tập
-      </span>
-      
-    </div>
-    
-  </header>
-
-  
-  <div class="content text-gray-300 leading-relaxed">
-    <h2 id="1-biến-trong-java"><strong>1. Biến trong Java</strong></h2>
-<ul>
-<li>Trong lập trình, chúng ta cần một nơi để lưu trữ dữ liệu (như con số, văn bản,&hellip;) để có thể sử dụng sau này. Nơi đó được gọi là biến (variable).</li>
-</ul>
-<h3 id="cú-pháp-khai-báo-biến">Cú pháp khai báo biến:</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>kiểu_dữ_liệu tên_biến <span style="color:#f92672">=</span> giá_trị;
-</span></span></code></pre></div><h3 id="ví-dụ">Ví dụ:</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> tuoi <span style="color:#f92672">=</span> 20;           <span style="color:#75715e">// Số nguyên</span>
-</span></span><span style="display:flex;"><span>String ten <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sang&#34;</span>;     <span style="color:#75715e">// Chuỗi</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">double</span> diem <span style="color:#f92672">=</span> 8.<span style="color:#a6e22e">5</span>;       <span style="color:#75715e">// Số thực</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">boolean</span> hocGioi <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;  <span style="color:#75715e">// Boolean</span>
-</span></span></code></pre></div><h2 id="2-các-kiểu-dữ-liệu-cơ-bản"><strong>2. Các kiểu dữ liệu cơ bản</strong></h2>
-<h3 id="kiểu-số-nguyên"><strong>Kiểu số nguyên:</strong></h3>
-<ul>
-<li><code>byte</code>: -128 đến 127 (1 byte)</li>
-<li><code>short</code>: -32,768 đến 32,767 (2 bytes)</li>
-<li><code>int</code>: -2,147,483,648 đến 2,147,483,647 (4 bytes)</li>
-<li><code>long</code>: Rất lớn (8 bytes)</li>
-</ul>
-<h3 id="kiểu-số-thực"><strong>Kiểu số thực:</strong></h3>
-<ul>
-<li><code>float</code>: Số thực 4 bytes</li>
-<li><code>double</code>: Số thực 8 bytes (chính xác hơn)</li>
-</ul>
-<h3 id="kiểu-ký-tự"><strong>Kiểu ký tự:</strong></h3>
-<ul>
-<li><code>char</code>: Một ký tự đơn</li>
-<li><code>String</code>: Chuỗi ký tự</li>
-</ul>
-<h3 id="kiểu-logic"><strong>Kiểu logic:</strong></h3>
-<ul>
-<li><code>boolean</code>: true hoặc false</li>
-</ul>
-<h2 id="3-ví-dụ-thực-tế"><strong>3. Ví dụ thực tế</strong></h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BienVaKieuDuLieu</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Khai báo các biến</span>
-</span></span><span style="display:flex;"><span>        String hoTen <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hoang Thanh Sang&#34;</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> tuoi <span style="color:#f92672">=</span> 20;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">double</span> diemTB <span style="color:#f92672">=</span> 8.<span style="color:#a6e22e">5</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">boolean</span> laSinhVien <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// In ra màn hình</span>
-</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Họ tên: &#34;</span> <span style="color:#f92672">+</span> hoTen);
-</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Tuổi: &#34;</span> <span style="color:#f92672">+</span> tuoi);
-</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Điểm TB: &#34;</span> <span style="color:#f92672">+</span> diemTB);
-</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Là sinh viên: &#34;</span> <span style="color:#f92672">+</span> laSinhVien);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="4-lưu-ý-quan-trọng"><strong>4. Lưu ý quan trọng</strong></h2>
-<ul>
-<li><strong>Tên biến</strong> không được bắt đầu bằng số</li>
-<li><strong>Tên biến</strong> phân biệt hoa thường (case-sensitive)</li>
-<li><strong>Tên biến</strong> không được trùng với từ khóa Java</li>
-<li>Sử dụng <strong>camelCase</strong> cho tên biến (ví dụ: <code>diemTrungBinh</code>)</li>
-</ul>
-<h2 id="kết-luận-biến-là-khái-niệm-nền-tảng-bài-tiếp-theo-chúng-ta-sẽ-học-cách-thực-hiện-các-phép-toán-trên-những-biến-này"><strong>Kết luận</strong>: Biến là khái niệm nền tảng. Bài tiếp theo, chúng ta sẽ học cách thực hiện các phép toán trên những biến này!</h2>
-  </div>
-
-  
-  <footer class="mt-12 pt-6 border-t border-gray-700">
-    
-    <div class="flex items-center space-x-4 mb-6">
-      <div class="w-12 h-12 rounded-full overflow-hidden">
-        <img 
-          src="/blogveJAVA/images/image.jpg" 
-          alt="Hoang Thanh Sang"
-          class="w-full h-full object-cover"
-        />
-      </div>
-      <div>
-        <h3 class="text-white font-medium">Hoang Thanh Sang</h3>
-        <p class="text-gray-400 text-sm"></p>
-      </div>
-    </div>
-    
-
-    
-    <div class="flex justify-between items-center mt-8">
-  <div class="flex-1">
-    
-    <a href="/blogveJAVA/blog/post6/" class="flex items-center space-x-3 text-blue-400 hover:text-blue-300 transition-colors">
-      <i class="fas fa-arrow-left"></i>
-      <div>
-        <p class="text-sm text-gray-500">Bài trước</p>
-        <p class="font-medium">Mảng (Arrays) - Quản lý danh sách dữ liệu</p>
-      </div>
-    </a>
-    
-  </div>
-  
-  <div class="flex-1 text-right">
-    
-    <a href="/blogveJAVA/blog/post3/" class="flex items-center space-x-3 text-blue-400 hover:text-blue-300 transition-colors justify-end">
-      <div class="text-right">
-        <p class="text-sm text-gray-500">Bài tiếp theo</p>
-        <p class="font-medium">Công cụ xử lý - Toán tử (Operators) trong Java</p>
-      </div>
-      <i class="fas fa-arrow-right"></i>
-    </a>
-    
-  </div>
-</div>
-
-  </footer>
-</article>
-
-      </main>
-      <footer class="mt-16 pt-8 border-t border-gray-700 text-center">
-  <div class="text-gray-400 text-sm">
-    <p>powered by <a href="https://gohugo.io/">hugo</a></p>
-    <p class="mt-2">© 2025 Hoang Thanh Sang. Tất cả quyền được bảo lưu.</p>
-  </div>
-  
-  
-  
-  <div class="mt-4 flex justify-center space-x-4">
-    
-    <a href="#" class="text-gray-400 hover:text-white transition-colors" title="GitHub">
-      <i class="fab fa-github text-lg"></i>
-    </a>
-    
-    <a href="#" class="text-gray-400 hover:text-white transition-colors" title="Google Scholar">
-      <i class="ai ai-google-scholar text-lg"></i>
-    </a>
-    
-    <a href="#" class="text-gray-400 hover:text-white transition-colors" title="ResearchGate">
-      <i class="fab fa-researchgate text-lg"></i>
-    </a>
-    
-  </div>
-  
-</footer>
-
-    </div>
-  </body>
-</html>
+<!doctype html><html lang=VI class=dark><head><title>Cửa hàng dữ liệu - Biến và Các kiểu dữ liệu cơ bản - Blog về lập trình mạng</title><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Blog về lập trình mạng"><meta name=author content="Hoang Thanh Sang"><link rel=icon href=/blogvejava/favicon.ico type=image/x-icon><script src=https://cdn.tailwindcss.com></script><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel=stylesheet><style>body{font-family:inter,sans-serif}.prose{max-width:none}.prose h1,.prose h2,.prose h3,.prose h4,.prose h5,.prose h6{color:#f3f4f6}.prose p{color:#d1d5db}.prose a{color:#60a5fa;text-decoration:none}.prose a:hover{color:#93c5fd;text-decoration:underline}.prose code{background-color:#374151;color:#fbbf24;padding:.125rem .25rem;border-radius:.25rem}.prose pre{background-color:#1f2937;border:1px solid #374151}.prose blockquote{border-left:4px solid #60a5fa;background-color:#1f2937}</style></head><body class="min-h-screen bg-gray-900 text-white"><div class="container mx-auto px-4 py-8 max-w-4xl"><header class="border-b border-gray-700 pb-6 mb-8"><div class="flex items-center justify-between"><div class="flex items-center space-x-8"><a href=https://sanghtth.github.io/blogvejava/ class="text-2xl font-bold text-white hover:text-blue-400 transition-colors">Hoang Thanh Sang</a><nav class="hidden md:flex space-x-6"><a href=https://sanghtth.github.io/blogvejava/ class="text-gray-300 hover:text-white transition-colors">Trang chủ</a>
+<a href=/blogvejava/blog class="text-gray-300 hover:text-white transition-colors">Blog</a></nav></div><div class="flex items-center space-x-4"><a href=/blogvejava/search class="text-gray-300 hover:text-white transition-colors"><i class="fas fa-search"></i></a></div></div><div class="mt-6 flex items-center space-x-4"><div class="w-16 h-16 rounded-full overflow-hidden"><img src=/blogvejava/images/image.jpg alt="Hoang Thanh Sang" class="w-full h-full object-cover"></div><div><h1 class="text-xl font-semibold text-white">Hoang Thanh Sang</h1><p class=text-gray-400>22/08/2004</p><p class="text-sm text-gray-500">Thu Duc, HCM City, Vietnam</p></div></div></header><main class=mt-8><article class="prose prose-lg max-w-none"><header class="mb-8 pb-6 border-b border-gray-700"><h1 class="text-4xl font-bold text-white mb-4">Cửa hàng dữ liệu - Biến và Các kiểu dữ liệu cơ bản</h1><div class="flex items-center space-x-4 text-gray-400"><time datetime=2025-01-16 class="flex items-center"><i class="fas fa-calendar mr-2"></i>
+16/01/2025
+</time><span class="flex items-center"><i class="fas fa-user mr-2"></i>
+Hoang Thanh Sang
+</span><span class="flex items-center"><i class="fas fa-clock mr-2"></i>
+2 phút đọc</span></div><div class="mt-4 flex flex-wrap gap-2"><span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">#lập trình
+</span><span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">#học tập</span></div></header><div class="content text-gray-300 leading-relaxed"><h2 id=1-biến-trong-java><strong>1. Biến trong Java</strong></h2><ul><li>Trong lập trình, chúng ta cần một nơi để lưu trữ dữ liệu (như con số, văn bản,&mldr;) để có thể sử dụng sau này. Nơi đó được gọi là biến (variable).</li></ul><h3 id=cú-pháp-khai-báo-biến>Cú pháp khai báo biến:</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span>kiểu_dữ_liệu tên_biến <span style=color:#f92672>=</span> giá_trị;
+</span></span></code></pre></div><h3 id=ví-dụ>Ví dụ:</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>int</span> tuoi <span style=color:#f92672>=</span> 20;           <span style=color:#75715e>// Số nguyên</span>
+</span></span><span style=display:flex><span>String ten <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Sang&#34;</span>;     <span style=color:#75715e>// Chuỗi</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>double</span> diem <span style=color:#f92672>=</span> 8.<span style=color:#a6e22e>5</span>;       <span style=color:#75715e>// Số thực</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>boolean</span> hocGioi <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span>;  <span style=color:#75715e>// Boolean</span>
+</span></span></code></pre></div><h2 id=2-các-kiểu-dữ-liệu-cơ-bản><strong>2. Các kiểu dữ liệu cơ bản</strong></h2><h3 id=kiểu-số-nguyên><strong>Kiểu số nguyên:</strong></h3><ul><li><code>byte</code>: -128 đến 127 (1 byte)</li><li><code>short</code>: -32,768 đến 32,767 (2 bytes)</li><li><code>int</code>: -2,147,483,648 đến 2,147,483,647 (4 bytes)</li><li><code>long</code>: Rất lớn (8 bytes)</li></ul><h3 id=kiểu-số-thực><strong>Kiểu số thực:</strong></h3><ul><li><code>float</code>: Số thực 4 bytes</li><li><code>double</code>: Số thực 8 bytes (chính xác hơn)</li></ul><h3 id=kiểu-ký-tự><strong>Kiểu ký tự:</strong></h3><ul><li><code>char</code>: Một ký tự đơn</li><li><code>String</code>: Chuỗi ký tự</li></ul><h3 id=kiểu-logic><strong>Kiểu logic:</strong></h3><ul><li><code>boolean</code>: true hoặc false</li></ul><h2 id=3-ví-dụ-thực-tế><strong>3. Ví dụ thực tế</strong></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>BienVaKieuDuLieu</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span>(String<span style=color:#f92672>[]</span> args) {
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Khai báo các biến</span>
+</span></span><span style=display:flex><span>        String hoTen <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Hoang Thanh Sang&#34;</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>int</span> tuoi <span style=color:#f92672>=</span> 20;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>double</span> diemTB <span style=color:#f92672>=</span> 8.<span style=color:#a6e22e>5</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>boolean</span> laSinhVien <span style=color:#f92672>=</span> <span style=color:#66d9ef>true</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// In ra màn hình</span>
+</span></span><span style=display:flex><span>        System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Họ tên: &#34;</span> <span style=color:#f92672>+</span> hoTen);
+</span></span><span style=display:flex><span>        System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Tuổi: &#34;</span> <span style=color:#f92672>+</span> tuoi);
+</span></span><span style=display:flex><span>        System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Điểm TB: &#34;</span> <span style=color:#f92672>+</span> diemTB);
+</span></span><span style=display:flex><span>        System.<span style=color:#a6e22e>out</span>.<span style=color:#a6e22e>println</span>(<span style=color:#e6db74>&#34;Là sinh viên: &#34;</span> <span style=color:#f92672>+</span> laSinhVien);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h2 id=4-lưu-ý-quan-trọng><strong>4. Lưu ý quan trọng</strong></h2><ul><li><strong>Tên biến</strong> không được bắt đầu bằng số</li><li><strong>Tên biến</strong> phân biệt hoa thường (case-sensitive)</li><li><strong>Tên biến</strong> không được trùng với từ khóa Java</li><li>Sử dụng <strong>camelCase</strong> cho tên biến (ví dụ: <code>diemTrungBinh</code>)</li></ul><h2 id=kết-luận-biến-là-khái-niệm-nền-tảng-bài-tiếp-theo-chúng-ta-sẽ-học-cách-thực-hiện-các-phép-toán-trên-những-biến-này><strong>Kết luận</strong>: Biến là khái niệm nền tảng. Bài tiếp theo, chúng ta sẽ học cách thực hiện các phép toán trên những biến này!</h2></div><footer class="mt-12 pt-6 border-t border-gray-700"><div class="flex items-center space-x-4 mb-6"><div class="w-12 h-12 rounded-full overflow-hidden"><img src=/blogvejava/images/image.jpg alt="Hoang Thanh Sang" class="w-full h-full object-cover"></div><div><h3 class="text-white font-medium">Hoang Thanh Sang</h3><p class="text-gray-400 text-sm"></p></div></div><div class="flex justify-between items-center mt-8"><div class=flex-1><a href=/blogvejava/blog/post6/ class="flex items-center space-x-3 text-blue-400 hover:text-blue-300 transition-colors"><i class="fas fa-arrow-left"></i><div><p class="text-sm text-gray-500">Bài trước</p><p class=font-medium>Mảng (Arrays) - Quản lý danh sách dữ liệu</p></div></a></div><div class="flex-1 text-right"><a href=/blogvejava/blog/post3/ class="flex items-center space-x-3 text-blue-400 hover:text-blue-300 transition-colors justify-end"><div class=text-right><p class="text-sm text-gray-500">Bài tiếp theo</p><p class=font-medium>Công cụ xử lý - Toán tử (Operators) trong Java</p></div><i class="fas fa-arrow-right"></i></a></div></div></footer></article></main><footer class="mt-16 pt-8 border-t border-gray-700 text-center"><div class="text-gray-400 text-sm"><p>powered by <a href=https://gohugo.io/>hugo</a></p><p class=mt-2>© 2025 Hoang Thanh Sang. Tất cả quyền được bảo lưu.</p></div><div class="mt-4 flex justify-center space-x-4"><a href=# class="text-gray-400 hover:text-white transition-colors" title=GitHub><i class="fab fa-github text-lg"></i>
+</a><a href=# class="text-gray-400 hover:text-white transition-colors" title="Google Scholar"><i class="ai ai-google-scholar text-lg"></i>
+</a><a href=# class="text-gray-400 hover:text-white transition-colors" title=ResearchGate><i class="fab fa-researchgate text-lg"></i></a></div></footer></div></body></html>

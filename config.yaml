@@ -1,4 +1,4 @@
-baseURL: "https://sanghtth.github.io/blogveJAVA/"
+baseURL: "https://sanghtth.github.io/blogvejava/"
 languageCode: VI
 build:
   writeStats: true
