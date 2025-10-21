@@ -1,4 +1,4 @@
-baseURL: "https://example.org/"
+baseURL: "https://yourusername.github.io/blogLTM/"
 languageCode: VI
 build:
   writeStats: true
