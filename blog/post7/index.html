@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="VI" class="dark"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+  <title>Phương thức (Methods) - Đóng gói và Tái sử dụng Code - Blog về lập trình mạng</title>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blog về lập trình mạng" />
+  <meta name="author" content="Hoang Thanh Sang" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .prose {
+      max-width: none;
+    }
+    .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+      color: #f3f4f6;
+    }
+    .prose p {
+      color: #d1d5db;
+    }
+    .prose a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+    .prose a:hover {
+      color: #93c5fd;
+      text-decoration: underline;
+    }
+    .prose code {
+      background-color: #374151;
+      color: #fbbf24;
+      padding: 0.125rem 0.25rem;
+      border-radius: 0.25rem;
+    }
+    .prose pre {
+      background-color: #1f2937;
+      border: 1px solid #374151;
+    }
+    .prose blockquote {
+      border-left: 4px solid #60a5fa;
+      background-color: #1f2937;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gray-900 text-white">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+      <header class="border-b border-gray-700 pb-6 mb-8">
+  <div class="flex items-center justify-between">
+    <div class="flex items-center space-x-8">
+      <a href="http://localhost:1313/" class="text-2xl font-bold text-white hover:text-blue-400 transition-colors">
+        Hoang Thanh Sang
+      </a>
+      <nav class="hidden md:flex space-x-6">
+        <a href="http://localhost:1313/" class="text-gray-300 hover:text-white transition-colors">Trang chủ</a>
+        <a href="/blog" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+      </nav>
+    </div>
+    <div class="flex items-center space-x-4">
+      <a href="/search" class="text-gray-300 hover:text-white transition-colors">
+        <i class="fas fa-search"></i>
+      </a>
+    </div>
+  </div>
+  
+  
+  <div class="mt-6 flex items-center space-x-4">
+    <div class="w-16 h-16 rounded-full overflow-hidden">
+      <img 
+        src="/images/image.jpg" 
+        alt="Hoang Thanh Sang"
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <div>
+      <h1 class="text-xl font-semibold text-white">Hoang Thanh Sang</h1>
+      <p class="text-gray-400">22/08/2004</p>
+      <p class="text-sm text-gray-500">Thu Duc, HCM City, Vietnam</p>
+    </div>
+  </div>
+</header>
+
+      <main class="mt-8">
+<article class="prose prose-lg max-w-none">
+  
+  <header class="mb-8 pb-6 border-b border-gray-700">
+    <h1 class="text-4xl font-bold text-white mb-4">Phương thức (Methods) - Đóng gói và Tái sử dụng Code</h1>
+    <div class="flex items-center space-x-4 text-gray-400">
+      <time datetime="2025-01-16" class="flex items-center">
+        <i class="fas fa-calendar mr-2"></i>
+        16/01/2025
+      </time>
+      
+      <span class="flex items-center">
+        <i class="fas fa-user mr-2"></i>
+        Hoang Thanh Sang
+      </span>
+      
+      
+      <span class="flex items-center">
+        <i class="fas fa-clock mr-2"></i>
+        2 phút đọc
+      </span>
+      
+    </div>
+    
+    
+    <div class="mt-4 flex flex-wrap gap-2">
+      
+      <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+        #lập trình
+      </span>
+      
+      <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+        #học tập
+      </span>
+      
+    </div>
+    
+  </header>
+
+  
+  <div class="content text-gray-300 leading-relaxed">
+    <h2 id="khi-bạn-viết-các-chương-trình-lớn-phương-thức-main-sẽ-trở-nên-rất-dài-và-khó-quản-lý-phương-thức-method-hay-còn-gọi-là-hàm---function-là-một-khối-code-được-đặt-tên-thực-hiện-một-nhiệm-vụ-cụ-thể"><strong>Khi bạn viết các chương trình lớn, phương thức main sẽ trở nên rất dài và khó quản lý. Phương thức (Method) (hay còn gọi là hàm - function) là một khối code được đặt tên, thực hiện một nhiệm vụ cụ thể.</strong></h2>
+<hr>
+<ul>
+<li>Lợi ích của Phương thức:</li>
+</ul>
+<ul>
+<li>
+<p>Tái sử dụng (Reusability): Viết 1 lần, gọi nhiều lần.</p>
+</li>
+<li>
+<p>Tổ chức (Organization): Chia một chương trình lớn thành các phần nhỏ, dễ hiểu.</p>
+</li>
+</ul>
+<ul>
+<li><strong>1. Cấu trúc một phương thức:</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span> <span style="color:#f92672">&lt;</span>kiểu_truy_cập<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">static</span> (tùy chọn)<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>kiểu_trả_về<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>tên_phương_thức<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span> (<span style="color:#f92672">&lt;</span>tham_số_1<span style="color:#f92672">&gt;</span>, <span style="color:#f92672">&lt;</span>tham_số_2<span style="color:#f92672">&gt;</span>, ...) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span>giá trị<span style="color:#f92672">&gt;</span>; <span style="color:#75715e">// (Nếu kiểu_trả_về không phải là void)</span>
+</span></span><span style="display:flex;"><span> }
+</span></span></code></pre></div><ul>
+<li>
+<p>Kiểu_trả_về:</p>
+</li>
+<li>
+<p><strong><em>void:</em></strong> Phương thức này không trả về giá trị nào (nó chỉ thực hiện hành động, ví dụ: System.out.println).</p>
+</li>
+<li>
+<p><strong><em>int, String, double,&hellip;:</em></strong> Phương thức này phải trả về một giá trị thuộc kiểu đó bằng từ khóa return.</p>
+</li>
+<li>
+<p><strong><em>tham_số (Parameters):</em></strong> Dữ liệu đầu vào mà phương thức cần để hoạt động.</p>
+</li>
+<li>
+<p><strong>2. Ví dụ 1: Phương thức void (Không trả về)</strong></p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MethodDemo</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Phương thức main là nơi chương trình bắt đầu</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Gọi phương thức chaoHoi</span>
+</span></span><span style="display:flex;"><span>        chaoHoi(<span style="color:#e6db74">&#34;Tuấn&#34;</span>); <span style="color:#75715e">// Output: Chào mừng Tuấn đến với blog!</span>
+</span></span><span style="display:flex;"><span>        chaoHoi(<span style="color:#e6db74">&#34;Lan&#34;</span>);  <span style="color:#75715e">// Output: Chào mừng Lan đến với blog!</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Đây là phương thức chaoHoi</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Nó nhận 1 tham số (parameter) tên là &#39;ten&#39; kiểu String</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">chaoHoi</span>(String ten) {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Chào mừng &#34;</span> <span style="color:#f92672">+</span> ten <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; đến với blog!&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li><strong>3. Ví dụ 2: Phương thức có trả về (Return value)</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Calculator</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Gọi phương thức tinhTong và lưu kết quả vào biến &#39;ketQua&#39;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> ketQua <span style="color:#f92672">=</span> tinhTong(5, 10);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Tổng là: &#34;</span> <span style="color:#f92672">+</span> ketQua); <span style="color:#75715e">// Output: Tổng là: 15</span>
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;100 + 200 = &#34;</span> <span style="color:#f92672">+</span> tinhTong(100, 200)); <span style="color:#75715e">// Output: 100 + 200 = 300</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Phương thức này trả về một giá trị kiểu &#39;int&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Nó nhận 2 tham số kiểu &#39;int&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">tinhTong</span>(<span style="color:#66d9ef">int</span> soA, <span style="color:#66d9ef">int</span> soB) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> tong <span style="color:#f92672">=</span> soA <span style="color:#f92672">+</span> soB;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> tong; <span style="color:#75715e">// Trả về kết quả</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="kết-luận-phương-thức-giúp-code-của-bạn-sạch-sẽ-và-dễ-bảo-trì-chúng-ta-đã-học-xong-các-kiến-thức-cơ-bản-về-lập-trình-thủ-tục-ở-bài-tiếp-theo-chúng-ta-sẽ-bước-vào"><strong>Kết luận: Phương thức giúp code của bạn sạch sẽ và dễ bảo trì. Chúng ta đã học xong các kiến thức cơ bản về lập trình thủ tục. Ở bài tiếp theo, chúng ta sẽ bước vào &ldquo;trái tim&rdquo; thực sự của Java: Lập trình Hướng đối tượng (OOP) với Lớp và Đối tượng.</strong></h2>
+  </div>
+
+  
+  <footer class="mt-12 pt-6 border-t border-gray-700">
+    
+    <div class="flex items-center space-x-4 mb-6">
+      <div class="w-12 h-12 rounded-full overflow-hidden">
+        <img 
+          src="/images/image.jpg" 
+          alt="Hoang Thanh Sang"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div>
+        <h3 class="text-white font-medium">Hoang Thanh Sang</h3>
+        <p class="text-gray-400 text-sm"></p>
+      </div>
+    </div>
+    
+
+    
+    <div class="flex justify-between items-center mt-8">
+  <div class="flex-1">
+    
+    <a href="/blog/post4/" class="flex items-center space-x-3 text-blue-400 hover:text-blue-300 transition-colors">
+      <i class="fas fa-arrow-left"></i>
+      <div>
+        <p class="text-sm text-gray-500">Bài trước</p>
+        <p class="font-medium">Rẽ nhánh - Câu lệnh If-Else và Switch-Case</p>
+      </div>
+    </a>
+    
+  </div>
+  
+  <div class="flex-1 text-right">
+    
+    <a href="/blog/post6/" class="flex items-center space-x-3 text-blue-400 hover:text-blue-300 transition-colors justify-end">
+      <div class="text-right">
+        <p class="text-sm text-gray-500">Bài tiếp theo</p>
+        <p class="font-medium">Mảng (Arrays) - Quản lý danh sách dữ liệu</p>
+      </div>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+    
+  </div>
+</div>
+
+  </footer>
+</article>
+
+      </main>
+      <footer class="mt-16 pt-8 border-t border-gray-700 text-center">
+  <div class="text-gray-400 text-sm">
+    <p>powered by <a href="https://gohugo.io/">hugo</a></p>
+    <p class="mt-2">© 2025 Hoang Thanh Sang. Tất cả quyền được bảo lưu.</p>
+  </div>
+  
+  
+  
+  <div class="mt-4 flex justify-center space-x-4">
+    
+    <a href="#" class="text-gray-400 hover:text-white transition-colors" title="GitHub">
+      <i class="fab fa-github text-lg"></i>
+    </a>
+    
+    <a href="#" class="text-gray-400 hover:text-white transition-colors" title="Google Scholar">
+      <i class="ai ai-google-scholar text-lg"></i>
+    </a>
+    
+    <a href="#" class="text-gray-400 hover:text-white transition-colors" title="ResearchGate">
+      <i class="fab fa-researchgate text-lg"></i>
+    </a>
+    
+  </div>
+  
+</footer>
+
+    </div>
+  </body>
+</html>
