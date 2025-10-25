@@ -54,6 +54,16 @@
       background-color: #1f2937;
     }
   </style>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const progressBars = document.querySelectorAll('[data-width]');
+      progressBars.forEach(bar => {
+        const width = bar.getAttribute('data-width');
+        bar.style.width = width;
+      });
+    });
+  </script>
 </head>
 <body class="min-h-screen bg-gray-900 text-white">
     <div class="container mx-auto px-4 py-8 max-w-4xl">
@@ -189,7 +199,8 @@
       </div>
       <div>
         <h3 class="text-white font-medium">Hoang Thanh Sang</h3>
-        <p class="text-gray-400 text-sm"></p>
+        <p class="text-gray-400 text-sm">Tôi là Hoàng Thanh Sang, hiện là sinh viên năm cuối ngành CNTT tại Hutech.
+Với định hướng sự nghiệp …</p>
       </div>
     </div>
     
@@ -235,7 +246,7 @@
   
   <div class="mt-4 flex justify-center space-x-4">
     
-    <a href="#" class="text-gray-400 hover:text-white transition-colors" title="GitHub">
+    <a href="https://github.com/sanghtth/blogvejava.git" class="text-gray-400 hover:text-white transition-colors" title="GitHub">
       <i class="fab fa-github text-lg"></i>
     </a>
     

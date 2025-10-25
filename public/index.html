@@ -55,6 +55,16 @@
       background-color: #1f2937;
     }
   </style>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const progressBars = document.querySelectorAll('[data-width]');
+      progressBars.forEach(bar => {
+        const width = bar.getAttribute('data-width');
+        bar.style.width = width;
+      });
+    });
+  </script>
 </head>
 <body class="min-h-screen bg-gray-900 text-white">
     <div class="container mx-auto px-4 py-8 max-w-4xl">
@@ -95,10 +105,6 @@
 
       <main class="mt-8">
 <div class="prose prose-lg max-w-none">
-  <div class="text-center mb-12">
-    <h1 class="text-4xl font-bold text-white mb-4">Chào mừng đến với blog của tôi</h1>
-    <p class="text-xl text-gray-300 mb-8"></p>
-  </div>
 
   
   <div class="bg-gray-800 rounded-lg p-8 mb-8">
@@ -106,7 +112,10 @@
       <i class="fas fa-user mr-3 text-blue-400"></i>
       About Me
     </h2>
-    <p class="text-gray-300 leading-relaxed"></p>
+    <p class="text-gray-300 leading-relaxed">Tôi là Hoàng Thanh Sang, hiện là sinh viên năm cuối ngành CNTT tại Hutech.
+Với định hướng sự nghiệp trở thành một kĩ sư công nghệ phần mềm, tôi dành phần lớn thời gian của mình để nghiên cứu và làm việc với Python, SQL, Java Spring Boot, Microservices và AWS.
+Tôi tạo ra blog này như một thư viện số, nơi tôi chia sẻ các phân tích kỹ thuật chuyên sâu, các bài hướng dẫn (tutorials) về [Chủ đề chính của blog], và những bài học thực tế tôi rút ra từ các dự án cá nhân.
+Nếu bạn cũng quan tâm, tôi tin rằng bạn sẽ tìm thấy nhiều nội dung giá trị tại đây.</p>
   </div>
 
   
@@ -138,7 +147,7 @@
       <div class="bg-gray-700 rounded-lg p-4">
         <h3 class="text-white font-medium mb-2">Java/JavaScript, Python</h3>
         <div class="w-full bg-gray-600 rounded-full h-2">
-          <div class="bg-blue-500 h-2 rounded-full" style="width: 90%"></div>
+          <div class="bg-blue-500 h-2 rounded-full" data-width="90%"></div>
         </div>
         <p class="text-sm text-gray-400 mt-1">90%</p>
       </div>
@@ -146,7 +155,7 @@
       <div class="bg-gray-700 rounded-lg p-4">
         <h3 class="text-white font-medium mb-2">HTML, CSS, Bootstrap</h3>
         <div class="w-full bg-gray-600 rounded-full h-2">
-          <div class="bg-blue-500 h-2 rounded-full" style="width: 80%"></div>
+          <div class="bg-blue-500 h-2 rounded-full" data-width="80%"></div>
         </div>
         <p class="text-sm text-gray-400 mt-1">80%</p>
       </div>
@@ -154,7 +163,7 @@
       <div class="bg-gray-700 rounded-lg p-4">
         <h3 class="text-white font-medium mb-2">Node.js, Express.js, PHP</h3>
         <div class="w-full bg-gray-600 rounded-full h-2">
-          <div class="bg-blue-500 h-2 rounded-full" style="width: 50%"></div>
+          <div class="bg-blue-500 h-2 rounded-full" data-width="50%"></div>
         </div>
         <p class="text-sm text-gray-400 mt-1">50%</p>
       </div>
@@ -183,6 +192,109 @@
       <span class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm">
         Sleeping
       </span>
+      
+    </div>
+  </div>
+  
+
+  
+  
+  <div class="bg-gray-800 rounded-lg p-8 mb-8">
+    <h2 class="text-2xl font-semibold text-white mb-6 flex items-center">
+      <i class="fas fa-certificate mr-3 text-blue-400"></i>
+      Chứng chỉ
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <div class="bg-gray-700 rounded-lg p-6 hover:bg-gray-600 transition-colors">
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0">
+            <a href="https://www.credly.com/badges/f6a1c9fa-0eba-4a0d-8074-218edb1fab22/public_url1" target="_blank" rel="noopener noreferrer" class="block">
+              <img 
+                src="/blogvejava/aa.jpg" 
+                alt="JavaScript Essentials 2"
+                class="w-20 h-20 object-cover rounded-lg border-2 border-blue-400 hover:border-blue-300 transition-colors"
+                onerror="this.src='/images/favicon.ico'"
+              />
+            </a>
+          </div>
+          <div class="flex-1 min-w-0">
+            <a href="https://www.credly.com/badges/f6a1c9fa-0eba-4a0d-8074-218edb1fab22/public_url1" target="_blank" rel="noopener noreferrer" class="block group">
+              <h3 class="text-lg font-medium text-white group-hover:text-blue-400 transition-colors mb-2">
+                JavaScript Essentials 2
+              </h3>
+              <p class="text-gray-400 text-sm mb-1">Cisco</p>
+              <p class="text-gray-500 text-xs">2025</p>
+              <div class="mt-2">
+                <span class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">
+                  <i class="fas fa-external-link-alt mr-1"></i>
+                  Xem chứng chỉ
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-gray-700 rounded-lg p-6 hover:bg-gray-600 transition-colors">
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0">
+            <a href="https://www.credly.com/badges/5ba74ff5-156a-4489-ab65-0791f7fb8abe/public_url" target="_blank" rel="noopener noreferrer" class="block">
+              <img 
+                src="/blogvejava/a2.jpg" 
+                alt="Networking Basics"
+                class="w-20 h-20 object-cover rounded-lg border-2 border-blue-400 hover:border-blue-300 transition-colors"
+                onerror="this.src='/images/favicon.ico'"
+              />
+            </a>
+          </div>
+          <div class="flex-1 min-w-0">
+            <a href="https://www.credly.com/badges/5ba74ff5-156a-4489-ab65-0791f7fb8abe/public_url" target="_blank" rel="noopener noreferrer" class="block group">
+              <h3 class="text-lg font-medium text-white group-hover:text-blue-400 transition-colors mb-2">
+                Networking Basics
+              </h3>
+              <p class="text-gray-400 text-sm mb-1">Cisco</p>
+              <p class="text-gray-500 text-xs">2025</p>
+              <div class="mt-2">
+                <span class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">
+                  <i class="fas fa-external-link-alt mr-1"></i>
+                  Xem chứng chỉ
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-gray-700 rounded-lg p-6 hover:bg-gray-600 transition-colors">
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0">
+            <a href="https://www.credly.com/badges/6a2b630e-ebe0-4dc0-8a62-555e3fcc3037/public_url" target="_blank" rel="noopener noreferrer" class="block">
+              <img 
+                src="/blogvejava/a3.jpg" 
+                alt="JavaScript Essentials 1"
+                class="w-20 h-20 object-cover rounded-lg border-2 border-blue-400 hover:border-blue-300 transition-colors"
+                onerror="this.src='/images/favicon.ico'"
+              />
+            </a>
+          </div>
+          <div class="flex-1 min-w-0">
+            <a href="https://www.credly.com/badges/6a2b630e-ebe0-4dc0-8a62-555e3fcc3037/public_url" target="_blank" rel="noopener noreferrer" class="block group">
+              <h3 class="text-lg font-medium text-white group-hover:text-blue-400 transition-colors mb-2">
+                JavaScript Essentials 1
+              </h3>
+              <p class="text-gray-400 text-sm mb-1">Cisco</p>
+              <p class="text-gray-500 text-xs">2025</p>
+              <div class="mt-2">
+                <span class="inline-flex items-center text-blue-400 text-sm hover:text-blue-300 transition-colors">
+                  <i class="fas fa-external-link-alt mr-1"></i>
+                  Xem chứng chỉ
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
       
     </div>
   </div>
@@ -249,7 +361,7 @@
   
   <div class="mt-4 flex justify-center space-x-4">
     
-    <a href="#" class="text-gray-400 hover:text-white transition-colors" title="GitHub">
+    <a href="https://github.com/sanghtth/blogvejava.git" class="text-gray-400 hover:text-white transition-colors" title="GitHub">
       <i class="fab fa-github text-lg"></i>
     </a>
     

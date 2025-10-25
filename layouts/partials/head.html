@@ -55,4 +55,14 @@
       background-color: #1f2937;
     }
   </style>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const progressBars = document.querySelectorAll('[data-width]');
+      progressBars.forEach(bar => {
+        const width = bar.getAttribute('data-width');
+        bar.style.width = width;
+      });
+    });
+  </script>
 </head>
