@@ -2,73 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Học Tập on Blog về lập trình mạng</title>
-    <link>http://localhost:1313/blogvejava/tags/h%E1%BB%8Dc-t%E1%BA%ADp/</link>
+    <link>http://localhost:61770/tags/h%E1%BB%8Dc-t%E1%BA%ADp/</link>
     <description>Recent content in Học Tập on Blog về lập trình mạng</description>
     <generator>Hugo</generator>
     <language>VI</language>
     <lastBuildDate>Thu, 16 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blogvejava/tags/h%E1%BB%8Dc-t%E1%BA%ADp/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:61770/tags/h%E1%BB%8Dc-t%E1%BA%ADp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lớp (Class) và Đối tượng (Object) - Cốt lõi của OOP</title>
-      <link>http://localhost:1313/blogvejava/blog/post8/</link>
+      <link>http://localhost:61770/blog/post8/</link>
       <pubDate>Thu, 16 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogvejava/blog/post8/</guid>
+      <guid>http://localhost:61770/blog/post8/</guid>
       <description></description>
     </item>
     <item>
       <title>Xử lý sự cố - Exception Handling (Try-Catch)</title>
-      <link>http://localhost:1313/blogvejava/blog/post9/</link>
+      <link>http://localhost:61770/blog/post9/</link>
       <pubDate>Thu, 16 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogvejava/blog/post9/</guid>
+      <guid>http://localhost:61770/blog/post9/</guid>
       <description></description>
     </item>
     <item>
       <title>Chào thế giới Java! ☕ Cài đặt JDK và Viết chương trình đầu tiên</title>
-      <link>http://localhost:1313/blogvejava/blog/post1/</link>
+      <link>http://localhost:61770/blog/post1/</link>
       <pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogvejava/blog/post1/</guid>
+      <guid>http://localhost:61770/blog/post1/</guid>
       <description></description>
     </item>
     <item>
       <title>Công cụ xử lý - Toán tử (Operators) trong Java</title>
-      <link>http://localhost:1313/blogvejava/blog/post3/</link>
+      <link>http://localhost:61770/blog/post3/</link>
       <pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogvejava/blog/post3/</guid>
+      <guid>http://localhost:61770/blog/post3/</guid>
       <description></description>
     </item>
     <item>
       <title>Cửa hàng dữ liệu - Biến và Các kiểu dữ liệu cơ bản</title>
-      <link>http://localhost:1313/blogvejava/blog/post2/</link>
+      <link>http://localhost:61770/blog/post2/</link>
       <pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogvejava/blog/post2/</guid>
+      <guid>http://localhost:61770/blog/post2/</guid>
       <description></description>
     </item>
     <item>
       <title>Mảng (Arrays) - Quản lý danh sách dữ liệu</title>
-      <link>http://localhost:1313/blogvejava/blog/post6/</link>
+      <link>http://localhost:61770/blog/post6/</link>
       <pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogvejava/blog/post6/</guid>
+      <guid>http://localhost:61770/blog/post6/</guid>
       <description></description>
     </item>
     <item>
       <title>Phương thức (Methods) - Đóng gói và Tái sử dụng Code</title>
-      <link>http://localhost:1313/blogvejava/blog/post7/</link>
+      <link>http://localhost:61770/blog/post7/</link>
       <pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogvejava/blog/post7/</guid>
+      <guid>http://localhost:61770/blog/post7/</guid>
       <description></description>
     </item>
     <item>
       <title>Rẽ nhánh - Câu lệnh If-Else và Switch-Case</title>
-      <link>http://localhost:1313/blogvejava/blog/post4/</link>
+      <link>http://localhost:61770/blog/post4/</link>
       <pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogvejava/blog/post4/</guid>
+      <guid>http://localhost:61770/blog/post4/</guid>
       <description></description>
     </item>
     <item>
       <title>Vòng lặp (Loops) - Đừng tự lặp lại chính mình!</title>
-      <link>http://localhost:1313/blogvejava/blog/post5/</link>
+      <link>http://localhost:61770/blog/post5/</link>
       <pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blogvejava/blog/post5/</guid>
+      <guid>http://localhost:61770/blog/post5/</guid>
       <description></description>
     </item>
   </channel>
