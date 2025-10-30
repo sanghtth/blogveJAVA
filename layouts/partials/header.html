@@ -18,11 +18,12 @@
   
   <!-- Profile section -->
   <div class="mt-6 flex items-center space-x-4">
-    <div class="w-16 h-16 rounded-full overflow-hidden">
+    <div class="w-24 h-24 rounded-full overflow-hidden">
       <img 
-        src="{{ `images` | relURL }}/{{ .Site.Params.profile.photo }}" 
+        src="{{ .Site.BaseURL }}images/sang.jpg" 
         alt="{{ .Site.Params.profile.name }}"
         class="w-full h-full object-cover"
+        onerror="this.src='{{ .Site.BaseURL }}images/favicon.ico'"
       />
     </div>
     <div>

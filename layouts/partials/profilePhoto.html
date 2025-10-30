@@ -1,9 +1,9 @@
 <div
-  class="w-full p-2 flex justify-center align-middle profile-photo-container"
+  class="w-full p-4 flex justify-center align-middle profile-photo-container"
 >
   <img
-    class="rounded-sm"
-    src="{{ `images` | relURL }}/{{ .Site.Params.images.photo }}"
-    alt="{{ .Site.Params.author }}"
+    class="w-48 h-48 rounded-lg object-cover border-4 border-blue-400 shadow-lg hover:shadow-xl transition-shadow"
+    src="{{ .Site.BaseURL }}images/sang.jpg"
+    alt="{{ .Site.Params.profile.name }}"
   />
 </div>

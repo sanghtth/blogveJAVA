@@ -94,9 +94,10 @@
       "group",
       "group-hover:text-blue-400",
       "h-12",
-      "h-16",
       "h-2",
       "h-20",
+      "h-24",
+      "h-32",
       "h-full",
       "hidden",
       "highlight",
@@ -184,8 +185,9 @@
       "text-xs",
       "transition-colors",
       "w-12",
-      "w-16",
       "w-20",
+      "w-24",
+      "w-32",
       "w-full"
     ],
     "ids": [

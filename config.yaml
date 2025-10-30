@@ -27,7 +27,7 @@ params:
     name: "Hoang Thanh Sang"
     tagline: 22/08/2004
     location: "Thu Duc, HCM City, Vietnam"
-    photo: image.jpg
+    photo: "images/sang.jpg"
   social:
     title: Links
     list:
@@ -53,7 +53,7 @@ params:
 
 Với định hướng sự nghiệp trở thành một kĩ sư công nghệ phần mềm, tôi dành phần lớn thời gian của mình để nghiên cứu và làm việc với Python, SQL, Java Spring Boot, Microservices và AWS.
 
-Tôi tạo ra blog này như một thư viện số, nơi tôi chia sẻ các phân tích kỹ thuật chuyên sâu, các bài hướng dẫn (tutorials) về [Chủ đề chính của blog], và những bài học thực tế tôi rút ra từ các dự án cá nhân.
+Tôi tạo ra blog này như một thư viện số, nơi tôi chia sẻ các phân tích kỹ thuật chuyên sâu, các bài hướng dẫn về chủ đề chính của blog, và những bài học thực tế tôi rút ra từ các dự án cá nhân.
 
 Nếu bạn cũng quan tâm, tôi tin rằng bạn sẽ tìm thấy nhiều nội dung giá trị tại đây."
   education:
@@ -69,11 +69,11 @@ Nếu bạn cũng quan tâm, tôi tin rằng bạn sẽ tìm thấy nhiều nộ
     icon: fas fa-cogs
     list:
       - skill: "Java/JavaScript, Python"
-        skillrating: 90
+        skillrating: 80
       - skill: HTML, CSS, Bootstrap
         skillrating: 80
       - skill: Node.js, Express.js, PHP
-        skillrating: 50
+        skillrating: 80
   hobby:
     title: Hobbies
     icon: fas fa-gamepad
@@ -88,16 +88,16 @@ Nếu bạn cũng quan tâm, tôi tin rằng bạn sẽ tìm thấy nhiều nộ
       - name: "JavaScript Essentials 2"
         issuer: "Cisco"
         date: "2025"
-        image: "aa.jpg"
+        image: "images/aa.jpg"
         link: "https://www.credly.com/badges/f6a1c9fa-0eba-4a0d-8074-218edb1fab22/public_url1"
       - name: "Networking Basics"
         issuer: "Cisco"
         date: "2025"
-        image: "a2.jpg"
+        image: "images/a2.jpg"
         link: "https://www.credly.com/badges/5ba74ff5-156a-4489-ab65-0791f7fb8abe/public_url"
       - name: "JavaScript Essentials 1"
         issuer: "Cisco"
         date: "2025"
-        image: "a3.jpg"
+        image: "images/a3.jpg"
         link: "https://www.credly.com/badges/6a2b630e-ebe0-4dc0-8a62-555e3fcc3037/public_url"
 
